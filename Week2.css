@@ -1,0 +1,74 @@
+body {
+    background-image: url('images/AdobeStock_390229338.jpeg');
+    overflow: hidden;
+    
+}
+
+.crawlcontainer{
+ display: flex;
+ color: white;
+ font-family: 'scroll';
+ font-size: 200%;
+ text-align: center;
+ 
+}
+
+@keyframes crawl{
+    0% {
+        top: 50vh;
+    }
+    100% {
+        top: -100vh;
+    }
+}
+
+@font-face {
+  font-family:"pseudo";
+  src: url(fonts/pseudo.ttf) format("truetype");
+}
+
+@font-face {
+    font-family:"scroll";
+    src: url(fonts/Px437_ToshibaTxL1_8x8.ttf) format("truetype");
+}
+
+h1{
+      font-family: pseudo;
+      font-size:600%;
+      line-height: 150%;
+      margin-right: 5%;
+      margin-left: 5%;
+      color:darkred;
+      text-align:center;
+      border-color:darkred;
+      border-style:solid;
+      border-width: thick;
+      border-radius:10px;
+      
+}
+
+.crawl:hover{
+    color:green;
+    border-color:green;
+}
+
+.crawl{
+    transition: color 2s, border-color 2s;
+}
+
+h2{
+    font-family: scroll;
+    font-size:100%;
+    color:white;
+}
+
+
+.crawl {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -100px;
+  transform-origin: 50% 100%;
+  animation: crawl 30s linear;
+}
+
