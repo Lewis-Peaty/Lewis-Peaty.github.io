@@ -1,0 +1,109 @@
+
+/*
+ Week 1/2 Exercise (Updated for Assignment 1)
+ Author: Lewis Peaty
+ Date: 2022/03/28
+ 
+ There were a few options in the exercise so I've gone with the following...
+ 1. @font-face rule
+ 2. Background image
+ 3. CSS Flexbox
+ 4. Animations
+ Transitions
+ Rounded corners
+ Opacity, and
+ Borders.
+
+ I used some 3rd party fonts and stock images plus some CSS code tips to get the text animation working. Code/inspiration from the CSS Tricks article has been used to implement the crawl.
+ 
+
+ References:
+
+ Anna. (2022, 03 13). starry sky in retro pixel style . Retrieved from stock.adobe.com: https://stock.adobe.com/mt/images/starry-sky-in-retro-pixel-style/390229338
+
+ Graham, G. (2022, 03 13). Star Wars Crawl Text . Retrieved from CSS Tricks: https://css-tricks.com/snippets/css/star-wars-crawl-text/
+
+ Kent, B. (2022, 03 13). Pseudo (font). Retrieved from 1001 Free Fonts: https://www.1001freefonts.com/pseudo.font
+
+ Toshiba. (2022, 03 13). ToshibaTxL1 8x8 . Retrieved from int10h.org: https://int10h.org/oldschool-pc-fonts/fontlist/font?toshibatxl1_8x8
+ 
+ */
+
+
+body {
+    /* Reference the background image */
+    background-image: url('images/AdobeStock_390229338.jpeg');
+    /*overflow: hidden;*/
+
+}
+
+.crawlcontainer{
+ display: flex; /* a little bit redundant as everything is single column */
+ color: white;
+ font-family: 'scroll'; /* Set the custom font */
+ font-size: 200%; /* Set the font size */
+ text-align: center; /* Center the text */
+ margin-left: 18%;
+}
+
+@keyframes crawl{
+    0% {
+        top: 50vh; /* Text begins near bottom of screen */
+    }
+    100% {
+        top: -100vh; /* Text ends above the screen */
+    }
+}
+
+/* font-face declarations reference the locally stored font files */
+@font-face {
+  font-family:"pseudo";
+  src: url(fonts/pseudo.ttf) format("truetype");
+}
+
+@font-face {
+    font-family:"scroll";
+    src: url(fonts/Px437_ToshibaTxL1_8x8.ttf) format("truetype");
+}
+
+/* Sets the properties of the main title: "Space Quest" */
+h1{
+      font-family: pseudo;
+      font-size:600%;
+      line-height: 150%;
+      margin-right: 5%;
+      margin-left: 5%;
+      color:darkred;
+      text-align:center;
+      border-color:darkred;
+      border-style:solid;
+      border-width: thick;
+      border-radius:10px;
+      
+}
+
+
+/* Set the font and size of the h2 heading.*/
+h2{
+    font-family: scroll;
+    font-size:100%;
+}
+
+/* Set the position and animation for the crawl */
+.crawl {
+  position: relative;
+  animation: crawl 0s linear;
+  transition: color 2s, border-color 2s;
+}
+
+/* Change colour when mouse hovers over text */
+.crawl:hover{
+    color:green;
+    border-color:green;
+}
+
+.h2:hover{
+    color:green;
+    border-color:green;
+}
+

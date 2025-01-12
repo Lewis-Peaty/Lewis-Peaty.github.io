@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>My Home Page</title>
+  <script type="text/javascript">
+    function calculateAndDisplay() {
+      var newNode = document.createElement("p");
+      document.getElementById("answer").innerHTML = "The answer is: " + (1 +
+1);
+      document.getElementById("answer").appendChild(newNode);
+    }
+    calculateAndDisplay();
+  </script>
+  </head>
+  <body>
+      
+      <h1 class="title" style="opacity:0.8;">HOME PAGE</h1>
+      <section class="crawlcontainer">
+
+          <div class="crawl">
+              <h2> LINKS! </h2>
+              <!-- <p id="answer"></p> -->
+              <p> <a href="https://hachyderm.io">Hachyderm.io!</a></p>
+<p> <a href=“https://forums.somethingawful.com/index.php”>Something Awful Forums!</a></p>
+              <p> <a href="https://open.spotify.com/">Spotify!</a> </p>
+              <p> <a href="https://soundcloud.com">SoundCloud!</a></p>
+              <p> <a href="https://web.whatsapp.com">WhatsApp!</a></p>
+              <p> <a href="https://drive.google.com">Google Drive!</a></p>
+              <p> <a href="https://artifactory.org.au/events">Artifactory Events!</a></p>
+              <p> <a href="https://wiki.artifactory.org.au">Artifactory Wiki!</a></p>
+              <p> <a href="https://www.icloud.com/mail/">Icloud webmail!</a></p>
+              <p> <a href="https://outlook.live.com/mail/0/">Outlook webmail!</a></p>
+              <p> What you have is enough </p>
+              <img src="images/stars.svg" alt="stars">
+         </div>
+      </section>
+      
+      
+<!-- Scripts to run after DOM has loaded -->
+
+  <script type="text/javascript">
+    function calculateAndDisplay() {
+      var newNode = document.createElement("p");
+      newNode.textContent = "The answer is: " + (1 + 1);
+      document.getElementById("answer").appendChild(newNode);
+    }
+    calculateAndDisplay();
+  </script>
+      
+    
+  </body>
+</html>
