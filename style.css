@@ -42,7 +42,7 @@ body {
  color: white;
  font-family: 'scroll'; /* Set the custom font */
  font-size: 200%; /* Set the font size */
- text-align: left; /* Center the text */
+ text-align: center; /* Center the text */
  margin-left: 18%;
 }
 
